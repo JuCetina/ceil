@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('icons/fonts/icomoon.eot?hqgxzu');
+    src:  url('icons/fonts/icomoon.eot?hqgxzu#iefix') format('embedded-opentype'),
+      url('icons/fonts/icomoon.ttf?hqgxzu') format('truetype'),
+      url('icons/fonts/icomoon.woff?hqgxzu') format('woff'),
+      url('icons/fonts/icomoon.svg?hqgxzu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-facebook2:before {
+    content: "\ea91";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  
+
+main .carousel-inner img{
+    max-height: 70vh;
+    object-fit: cover;
+    filter: grayscale(70%);
+}
+
+#carousel{
+    position: relative;
+}
+
+#carousel .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .6);
+    color: white;
+    z-index: 1;
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row{
+    height: 100%;
+}
+
+.btn-send{
+    background: #310f4c;
+    color: white;
+}
+
+.btn-send:hover{
+    background: #431869;
+    color: white;
+}
+
+footer{
+    color: white;
+    background-color: #28064c;
+    font-size: .8rem;
+}
+
+footer .icons{
+    font-size: 1.8rem;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+
+
