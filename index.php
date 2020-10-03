@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=David+Libre&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <title>Centro Educativo Integral Latinoamericano - Bachillerato por Ciclos</title>
 </head>
 <body>
@@ -151,31 +152,43 @@
             </div>
             <div class="row">
                 <div class="col col-md-10 col-lg-8 offset-md-1 offset-lg-2 pt-2 pb-2">
-					<form>
+					<form action="contacto.php" method="POST">
+                        <?php
+                            if(isset($_GET['error'])){
+                                if($_GET['error'] == 'no'){
+                                    echo '<div class="p-3 mb-2 bg-success text-white">La información ha sido enviada correctamente, nos pondremos en contacto con usted.</div>';
+                                }
+                                else
+                                {
+                                    echo '<div class="p-3 mb-2 bg-danger text-white">Hubo un error, inténtelo nuevamente.</div>';
+                                }
+                            }
+                        ?>
 						<div class="form-row">
 							<div class="form-group col-12 col-md-6">
-								<input type="text" class="form-control" placeholder="Nombre">
+								<input type="text" name="nombre" class="form-control" placeholder="Nombre" required pattern="[A-Za-z]+">
 							</div>
 							<div class="form-group col-12 col-md-6">
-								<input type="text" class="form-control" placeholder="Apellido">
+								<input type="text" name="apellido" class="form-control" placeholder="Apellido" required pattern="[A-Za-z]+">
 							</div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12 col-md-6">
-                                <input type="email" class="form-control" placeholder="E-mail">
+                                <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
                             </div>
                             <div class="form-group col-12 col-md-6">
-                                <input type="number" class="form-control" placeholder="Teléfono">
+                                <input type="number" name="tel" class="form-control" placeholder="Teléfono" required pattern="[0-9]+">
                             </div>
                         </div>
 						<div class="form-row">
 							<div class="form-group col">
-								<textarea name="text" class="form-control form-control-lg" placeholder="¿Sobre qué desea hablar?"></textarea>
+                                <textarea name="mensaje" class="form-control form-control-lg" placeholder="¿Sobre qué desea hablar?" required></textarea>
+                                <small class="form-text text-muted">Todos los campos son obligatorios.</small>
 							</div>
 						</div>
 						<div class="form-row">
 							<div class="col">
-								<button type="button" class="btn btn-success btn-block">Enviar</button>
+								<button type="submit" class="btn btn-success btn-block">Enviar</button>
 							</div>
 						</div>
 					</form>
