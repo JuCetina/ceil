@@ -11,17 +11,14 @@
 
     if(isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['email']) && isset($_POST['tel']) && isset($_POST['mensaje']))
     {
-        echo '<h2>'.$_POST['nombre'].'</h2>';
-        echo '<h2>'.$_POST['apellido'].'</h2>';
-        echo '<h2>'.$_POST['email'].'</h2>';
-        echo '<h2>'.$_POST['tel'].'</h2>';
-        echo '<h2>'.$_POST['mensaje'].'</h2>';
+        //var_dump($_POST);
 
         $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
         $apellido = filter_var($_POST['apellido'], FILTER_SANITIZE_STRING);
         $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        $mensaje = htmlspecialchars($_POST['mensaje']);
+        $tel = filter_var($_POST['tel'], FILTER_SANITIZE_NUMBER_INT);
+        $mensaje = htmlspecialchars($_POST['mensaje'])." Mi número de contacto es ".$tel;
 
         $headers  = 'MIME-Version: 1.0' . "\r\n"
         .'Content-type: text/html; charset=utf-8' . "\r\n"
