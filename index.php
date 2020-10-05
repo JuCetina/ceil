@@ -156,11 +156,11 @@
                         <?php
                             if(isset($_GET['error'])){
                                 if($_GET['error'] == 'no'){
-                                    echo '<div class="p-3 mb-2 bg-success text-white">La información ha sido enviada correctamente, nos pondremos en contacto con usted.</div>';
+                                    echo '<div class="p-3 mb-2 alert alert-success">La información ha sido enviada correctamente, nos pondremos en contacto con usted.</div>';
                                 }
                                 else
                                 {
-                                    echo '<div class="p-3 mb-2 bg-danger text-white">Hubo un error, inténtelo nuevamente.</div>';
+                                    echo '<div class="p-3 mb-2 alert alert-error">Hubo un error, inténtelo nuevamente.</div>';
                                 }
                             }
                         ?>

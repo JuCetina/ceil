@@ -17,7 +17,7 @@
         $apellido = filter_var($_POST['apellido'], FILTER_SANITIZE_STRING);
         $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        $tel = filter_var($_POST['tel'], FILTER_SANITIZE_NUMBER_INT);
+        $tel = filter_var($_POST['tel'], FILTER_VALIDATE_INT);
         $mensaje = htmlspecialchars($_POST['mensaje'])." Mi número de contacto es ".$tel;
 
         $headers  = 'MIME-Version: 1.0' . "\r\n"
@@ -26,16 +26,16 @@
      
         if(mail($recipient, $email_title, $mensaje, $headers)) {
             echo 'Se envió email';
-            //header("Location:index.php?error=$error#contacto");
+            header("Location:index.php?error=$error#contacto");
         } else {
-            $error = 'sipi';
+            $error = 'siemail';
             echo 'No se envió email';
-            //header("Location:index.php?error=$error#contacto");
+            header("Location:index.php?error=$error#contacto");
         }
     }
     else
     {
         $error = 'si';
-        //header("Location:index.php?error=$error#contacto");
+        header("Location:index.php?error=$error#contacto");
     }
 
