@@ -1,3 +1,9 @@
+<?php 
+
+    require_once 'includes/conexion.php';
+    require_once 'includes/helpers.php';
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -152,8 +158,12 @@
             </div>
             <div class="row">
                 <div class="col col-md-10 col-lg-8 offset-md-1 offset-lg-2 pt-2 pb-2">
-					<form action="#" method="POST">
-                        
+					<form action="contacto.php" method="POST">
+                        <?php if(isset($_SESSION['contacto_exito'])): ?>
+                            <div class="p-3 mb-2 alert alert-success"><?=$_SESSION['contacto_exito']?></div>
+                        <?php elseif(isset($_SESSION['contacto_error'])): ?>
+                            <div class="p-3 mb-2 alert alert-error"><?=$_SESSION['contacto_error']?></div>
+                        <?php endif; ?>
 						<div class="form-row">
 							<div class="form-group col-12 col-md-6">
 								<input type="text" name="nombre" class="form-control" placeholder="Nombre" required pattern="[A-Za-z]+">
@@ -181,7 +191,8 @@
 								<button type="submit" class="btn btn-success btn-block">Enviar</button>
 							</div>
 						</div>
-					</form>
+                    </form>
+                    <?php borrarAlertas(); ?>
 				</div>
             </div>
         </div>

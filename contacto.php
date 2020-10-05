@@ -1,41 +1,44 @@
 <?php
 
-    $error = 'no';
+if(isset($_POST)){
+    require_once 'includes/conexion.php';
+
     $recipient = "juliethcetina@gmail.com";
-    $email_title = "Enviado desde el Formulario de Contacto";
-    $nombre = '';
-    $apellido = '';
-    $email = '';
-    $tel = '';
-    $mensaje = '';
+    $email_title = "Enviado desde el Formulario de Contacto de CEIL";
 
     if(isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['email']) && isset($_POST['tel']) && isset($_POST['mensaje']))
     {
         //var_dump($_POST);
+        //die();
 
-        $nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
-        $apellido = filter_var($_POST['apellido'], FILTER_SANITIZE_STRING);
-        $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
+        $nombre = filter_var(trim($_POST['nombre']), FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+        $apellido = filter_var(trim($_POST['apellido']), FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+        $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', trim($_POST['email']));
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        $tel = filter_var($_POST['tel'], FILTER_VALIDATE_INT);
-        $mensaje = htmlspecialchars($_POST['mensaje'])." Mi número de contacto es ".$tel;
+        $tel = filter_var(trim($_POST['tel']), FILTER_VALIDATE_INT);
+        $mensaje = "Nombre: $nombre $apellido \nEmail: $email \nNúmero de contacto: $tel \n\n".htmlspecialchars($_POST['mensaje']);
 
         $headers  = 'MIME-Version: 1.0' . "\r\n"
         .'Content-type: text/html; charset=utf-8' . "\r\n"
         .'From: ' . $email . "\r\n";
      
         if(mail($recipient, $email_title, $mensaje, $headers)) {
-            echo 'Se envió email';
-            header("Location:index.php?error=$error#contacto");
+            $_SESSION['contacto_exito'] = "La información ha sido enviada correctamente, nos pondremos en contacto con usted.";
         } else {
-            $error = 'siemail';
-            echo 'No se envió email';
-            header("Location:index.php?error=$error#contacto");
+            $_SESSION['contacto_error'] = "No fue posible enviar la información de contacto.";
         }
     }
     else
     {
-        $error = 'si';
-        header("Location:index.php?error=$error#contacto");
+        $_SESSION['contacto_error'] = "Se generó un error, algunos datos no son válidos.";
     }
+}
+
+//var_dump($_SESSION['contacto_exito']);
+//var_dump($_SESSION['contacto_error']);
+//die();
+
+header("Location:index.php#contacto");
+
+
 
