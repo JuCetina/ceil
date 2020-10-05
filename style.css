@@ -38,6 +38,13 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    background-size: 45%;
+}
+
+@media screen and (max-width: 520px){
+    body{
+        background-size: 60%;
+    }
 }
   
 
@@ -114,6 +121,8 @@ footer a:hover{
     background: #f5c2c2;
     border: 1px solid #d41e1e;;
 }
+
+
 
 
 
