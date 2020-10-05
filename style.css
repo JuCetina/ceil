@@ -31,6 +31,14 @@
   .icon-instagram:before {
     content: "\ea92";
   }
+
+body{
+    background-color: white;
+    background-image: url(img/watermark.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
   
 
 main .carousel-inner img{
