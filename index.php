@@ -166,10 +166,10 @@
                         <?php endif; ?>
 						<div class="form-row">
 							<div class="form-group col-12 col-md-6">
-								<input type="text" name="nombre" class="form-control" placeholder="Nombre" required pattern="[A-Za-z]+">
+								<input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
 							</div>
 							<div class="form-group col-12 col-md-6">
-								<input type="text" name="apellido" class="form-control" placeholder="Apellido" required pattern="[A-Za-z]+">
+								<input type="text" name="apellido" class="form-control" placeholder="Apellido" required>
 							</div>
                         </div>
                         <div class="form-row">
