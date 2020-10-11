@@ -54,6 +54,10 @@
             </div>
         </div>
     </nav>
+
+    <hr class="roja">
+    <hr class="morada">
+
     <!-- Quiénes somos -->
     <main>
         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
@@ -157,7 +161,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col col-md-10 col-lg-8 offset-md-1 offset-lg-2 pt-2 pb-2">
+                <div class="col col-md-10 col-lg-8 offset-md-1 offset-lg-2 pt-2">
 					<form action="contacto.php" method="POST">
                         <?php if(isset($_SESSION['contacto_exito'])): ?>
                             <div class="p-3 mb-2 alert alert-success"><?=$_SESSION['contacto_exito']?></div>
@@ -197,8 +201,12 @@
             </div>
         </div>
     </section>
+
+    <hr class="roja">
+    <hr class="morada">
+    
     <!-- Footer -->
-    <footer class="footer mt-4 pb-4 pt-4">
+    <footer class="footer pb-4 pt-4">
         <div class="container">
             <div class="row text-center align-items-center">
                 <div class="col-12 col-md text-md-left pb-3">

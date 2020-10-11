@@ -45,8 +45,7 @@ body{
     body{
         background-size: 60%;
     }
-}
-  
+}  
 
 main .carousel-inner img{
     max-height: 70vh;
@@ -120,6 +119,19 @@ footer a:hover{
     color: #d41e1e;
     background: #f5c2c2;
     border: 1px solid #d41e1e;
+}
+
+hr{
+    height: 20px;
+    margin: 10px 0;
+}
+
+.roja{
+    background: #aa140c;
+}
+
+.morada{
+    background: #28064c;
 }
 
 
