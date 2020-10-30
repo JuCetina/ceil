@@ -60,7 +60,7 @@
 
     <!-- Quiénes somos -->
     <main>
-        <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+        <div id="carousel" class="anchor carousel slide carousel-fade" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
               <div class="carousel-item active">
                   <img src="img/ceil.jpg" class="d-block w-100" alt="Graduación 2019">
@@ -91,7 +91,7 @@
         </div>
     </main>
     <!-- Convenios -->
-    <section class="mt-4" id="convenios">
+    <section class="anchor mt-4" id="convenios">
         <div class="container">
             <div class="row mb-4">
 				<div class="col text-center text-uppercase">
@@ -153,7 +153,7 @@
         </div>
     </section>
     <!-- Contacto -->
-    <section class="mt-4" id="contacto">
+    <section class="anchor mt-4" id="contacto">
         <div class="container">
             <div class="row mb-4">
                 <div class="col text-uppercase text-center">

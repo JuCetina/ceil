@@ -41,6 +41,15 @@ body{
     background-size: 45%;
 }
 
+/* Para que el menú con position fixed no tape las anclas al navegar en ellas */
+.anchor::before{
+    content:'';
+    display: block;
+    height: 136px;
+    margin-top: -136px;
+    visibility: hidden;
+}
+
 @media screen and (max-width: 520px){
     body{
         background-size: 60%;
