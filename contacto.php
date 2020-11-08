@@ -5,8 +5,6 @@ if(isset($_POST)){
 
     if(isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['email']) && isset($_POST['tel']) && isset($_POST['mensaje']))
     {
-        //var_dump($_POST);
-        //die();
 
         $recipient = "juliethcetina@gmail.com";
         $email_title = "Enviado desde el Formulario de Contacto de CEIL";
@@ -33,10 +31,6 @@ if(isset($_POST)){
         $_SESSION['contacto_error'] = "Se generó un error, algunos datos no son válidos.";
     }
 }
-
-//var_dump($_SESSION['contacto_exito']);
-//var_dump($_SESSION['contacto_error']);
-//die();
 
 header("Location:index.php#contacto");
 
