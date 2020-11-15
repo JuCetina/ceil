@@ -62,31 +62,31 @@
     <main>
         <div id="carousel" class="anchor carousel slide carousel-fade" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img src="img/ceil.jpg" class="d-block w-100" alt="Graduación 2019">
-              </div>
-              <div class="carousel-item">
-                <img src="img/book.jpg" class="d-block w-100" alt="Libros de estudio">
-              </div>
-              <div class="carousel-item">
-                <img src="img/graduation.jpg" class="d-block w-100" alt="Graduación">
-              </div>
-              <div class="overlay">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-7 offset-md-5 text-center text-md-right">
-                            <h1 class="d-none d-sm-block">¿Quiénes Somos?</h1>
-                            <p class="d-sm-block">
-                                Mediante la resolución 06001 de enero de 2020, el Centro Educativo Integral 
-                                Latinoamericano ofrece el programa de Bachillerato Formal para adultos con la facilidad de terminar su formación académica en corto plazo.
-                            </p>
-                            <a href="#contacto" class="btn btn-outline-light">Contáctenos</a>
-                            <!-- button class="btn btn-send" data-toggle="modal" data-target="#modalTickets">Inscripciones</button> -->
-                            <button type="button" class="btn btn-send" data-container="body" data-toggle="popover" data-placement="top" title="Próximamente..." data-content="Estamos trabajando para brindarle un mejor servicio.">Inscripciones</button>
+                <div class="carousel-item active">
+                    <img src="img/ceil.jpg" class="d-block w-100" alt="Graduación 2019">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/book.jpg" class="d-block w-100" alt="Libros de estudio">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/graduation.jpg" class="d-block w-100" alt="Graduación">
+                </div>
+                <div class="overlay">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-7 offset-md-5 text-center text-md-right">
+                                <h1>¿Quiénes Somos?</h1>
+                                <p>
+                                    Mediante la resolución 06001 de enero de 2020, el Centro Educativo Integral 
+                                    Latinoamericano ofrece el programa de Bachillerato Formal para adultos con la facilidad de terminar su formación académica en corto plazo.
+                                </p>
+                                <a href="#contacto" class="btn btn-outline-light">Contáctenos</a>
+                                <!-- button class="btn btn-send" data-toggle="modal" data-target="#modalTickets">Inscripciones</button> -->
+                                <button type="button" class="btn btn-send" data-container="body" data-toggle="popover" data-placement="top" title="Próximamente..." data-content="Estamos trabajando para brindarle un mejor servicio.">Inscripciones</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-              </div>
             </div>
         </div>
     </main>
@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="col">
                     <div class="card">
-                        <div class="row no-gutters">
+                        <div class="row no-gutters align-items-center">
                             <div class="col-md-4">
                                 <img src="img/funcodes.png" class="card-img" alt="FUNCODES">
                             </div>
