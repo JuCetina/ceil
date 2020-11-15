@@ -50,12 +50,43 @@ body{
     visibility: hidden;
 }
 
+@media screen and (max-width: 768px){
+    .overlay h1{
+        font-size: 24px;
+    }
+
+    .overlay p{
+        font-size: 15px;
+    }
+
+    .overlay a, .overlay button{
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 520px){
     body{
         background-size: 60%;
     }
 }
-  
+
+@media screen and (max-width: 320px){
+    .navbar-toggler{
+        margin: 0 auto;
+    }
+
+    .overlay h1{
+        font-size: 18px;
+    }
+
+    .overlay p{
+        font-size: 13px;
+    }
+
+    .overlay a{
+        font-size: 12px;
+    }
+}
 
 main .carousel-inner img{
     max-height: 70vh;
