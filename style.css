@@ -50,6 +50,12 @@ body{
     visibility: hidden;
 }
 
+@media screen and (max-height: 376px){
+    .navbar .container{
+        flex-wrap: nowrap;
+    }
+}
+
 @media screen and (max-width: 768px){
     .overlay h1{
         font-size: 24px;
@@ -70,11 +76,13 @@ body{
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 368px){
     .navbar-toggler{
         margin: 0 auto;
     }
+}
 
+@media screen and (max-width: 320px){
     .overlay h1{
         font-size: 18px;
     }
