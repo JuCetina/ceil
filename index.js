@@ -1,7 +1,3 @@
-$(function () {
-    $('[data-toggle="popover"]').popover();
-});
-
 $(document).ready(function () {
     //Disable cut copy paste
     $('body').bind('cut copy paste', function (e) {

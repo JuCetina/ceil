@@ -26,15 +26,6 @@
                     <a class="nav-link" href="#carousel">¿Quiénes Somos?</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#convenios">Convenios</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inscripciones</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Noticias</a>
-                </li>
-                <li class="nav-item active">
                     <a class="nav-link" href="#" target="_blank">Aula Virtual</a>
                 </li>
                 <li class="nav-item active">
@@ -74,9 +65,8 @@
                                     Mediante la resolución 06001 de enero de 2020, el Centro Educativo Integral 
                                     Latinoamericano ofrece el programa de Bachillerato Formal para adultos con la facilidad de terminar su formación académica en corto plazo.
                                 </p>
-                                <a href="#contacto" class="btn btn-outline-light">Contáctenos</a>
-                                <!-- button class="btn btn-send" data-toggle="modal" data-target="#modalTickets">Inscripciones</button> -->
-                                <button type="button" class="btn btn-send" data-container="body" data-toggle="popover" data-placement="top" title="Próximamente..." data-content="Estamos trabajando para brindarle un mejor servicio.">Inscripciones</button>
+                                <a href="#contacto" class="btn btn-outline-light">Contáctanos</a>
+                                <button class="btn btn-send" data-toggle="modal" data-target="#modalMatricula">Matricúlate aquí</button>
                             </div>
                         </div>
                     </div>
@@ -84,41 +74,12 @@
             </div>
         </div>
     </main>
-    <!-- Convenios -->
-    <section class="anchor mt-4" id="convenios">
-        <div class="container">
-            <div class="row mb-4">
-				<div class="col text-center text-uppercase">
-                    <small>Conozca nuestros</small>
-					<h2>Convenios</h2>
-				</div>
-			</div>
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-4">
-                                <img src="img/funcodes.png" class="card-img" alt="FUNCODES">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h3 class="card-title">FUNCODES</h3>
-                                    <p class="card-text">Actualmente, la alianza con la Fundación Conocimiento para el Desarrollo (FUNCODES) nos permite ofrecer programas de capacitación para Pruebas Saber (ICFES).</p>
-                                    <p class="card-text">Contamos con valiosas e indispensables herramientas y calidad profesional para la adecuada preparación de las Pruebas Saber.</p>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Accesos -->
     <section class="mt-4">
         <div class="container">
 			<div class="row mb-4">
 				<div class="col text-center text-uppercase">
-					<small>Ingrese a</small>
+					<small>Ingresa a</small>
 					<h2>Nuestras Plataformas</h2>
 				</div>
             </div>
@@ -176,7 +137,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col">
-                                <textarea name="mensaje" class="form-control form-control-lg" placeholder="¿Sobre qué desea hablar?" required></textarea>
+                                <textarea name="mensaje" class="form-control form-control-lg" placeholder="¿Sobre qué deseas hablarnos?" required></textarea>
                                 <small class="form-text text-muted">Todos los campos son obligatorios.</small>
                             </div>
                         </div>
@@ -210,15 +171,36 @@
                             <i class="icon-instagram"></i>
                         </a>
                     </div>
-                    <p class="mb-1">Teléfono: 57(1) 1234567</p>
-                    <p class="mb-1">Móvil: +57 300-1234567</p>
-                    <p class="mb-1">Skype: usuarioskype</p>
-                    <p class="mb-1">Email: ejemplo@ceil.edu.co</p>
-                    <p class="mb-1">Calle 123 No. 45-67 Piso 2 Bogotá, Colombia</p>
+                    <p class="mb-1">3057045642 - 3057242954</p>
+                    <p class="mb-1">coordinacion@ceil.edu.co - rectoria@ceil.edu.co</p>
+                    <p class="mb-1">Diagonal 47A #53A - 95, Barrio Venecia</p>
+                    <p class="mb-1">Bogotá, Colombia</p>
                 </div>
             </div>
         </div>
     </footer>
+    <!-- Modal -->
+	 <div class="modal fade" id="modalMatricula" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			 <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Matrículas</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+             </div>
+             
+			 <div class="modal-body">
+                <div class="alert alert-warning" role="alert">
+                    <a href="descarga.php" class="alert-link">Descarga el archivo aquí</a>, diligencialo y envíalo escaneado al correo electrónico coordinacion@ceil.edu.co
+                </div>
+			 </div>
+			 <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+			 </div>
+		  </div>
+		</div>
+	 </div>
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
