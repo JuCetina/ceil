@@ -6,7 +6,7 @@ if(isset($_POST)){
     if(isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['email']) && isset($_POST['tel']) && isset($_POST['mensaje']))
     {
 
-        $recipient = "ejemplo@ejemplo.com";
+        $recipient = "coordinacion@ceil.edu.co";
         $email_title = "Enviado desde el Formulario de Contacto de CEIL";
 
         $nombre = filter_var(trim($_POST['nombre']), FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
@@ -21,9 +21,9 @@ if(isset($_POST)){
         .'From: ' . $email . "\r\n";
      
         if(mail($recipient, $email_title, $mensaje, $headers)) {
-            $_SESSION['contacto_exito'] = "La información ha sido enviada correctamente, nos pondremos en contacto con usted.";
+            $_SESSION['contacto_exito'] = "Tu mensaje ha sido enviado correctamente, pronto nos pondremos en contacto.";
         } else {
-            $_SESSION['contacto_error'] = "No fue posible enviar la información de contacto.";
+            $_SESSION['contacto_error'] = "No fue posible enviar el mensaje.";
         }
     }
     else

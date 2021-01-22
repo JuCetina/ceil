@@ -147,7 +147,7 @@
                         </div>
 						<div class="form-row">
 							<div class="form-group col">
-                                <textarea name="mensaje" class="form-control form-control-lg" placeholder="¿Sobre qué desea hablar?" required></textarea>
+                                <textarea name="mensaje" class="form-control form-control-lg" placeholder="¿Sobre qué deseas hablarnos?" required></textarea>
                                 <small class="form-text text-muted">Todos los campos son obligatorios.</small>
 							</div>
 						</div>
