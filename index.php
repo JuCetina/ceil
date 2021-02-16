@@ -54,13 +54,19 @@
         <div id="carousel" class="anchor carousel slide carousel-fade" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/ceil.jpg" class="d-block w-100" alt="Graduación 2019">
+                    <img src="img/ceil.jpg" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/book.jpg" class="d-block w-100" alt="Libros de estudio">
+                    <img src="img/book.jpg" class="d-block w-100" alt="">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/graduation.jpg" class="d-block w-100" alt="Graduación">
+                    <img src="img/graduacion1.jpeg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/graduation.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/graduacion2.jpeg" class="d-block w-100" alt="">
                 </div>
                 <div class="overlay">
                     <div class="container">
@@ -203,7 +209,7 @@
              
 			 <div class="modal-body">
                 <div class="alert alert-warning" role="alert">
-                    <a href="descarga.php" class="alert-link">Descarga el archivo aquí</a>, diligéncialo y envíalo escaneado al correo electrónico coordinacion@ceil.edu.co
+                    <a href="descarga.php" class="alert-link">Descarga el archivo aquí</a>, imprímelo, diligéncialo y envíalo escaneado al correo electrónico matriculas@ceil.edu.co
                 </div>
 			 </div>
 			 <div class="modal-footer">
