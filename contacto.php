@@ -14,7 +14,7 @@ if(isset($_POST)){
         $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', trim($_POST['email']));
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
         $tel = filter_var(trim($_POST['tel']), FILTER_VALIDATE_INT);
-        $mensaje = "Nombre: $nombre $apellido \r\nEmail: $email \r\nNúmero de contacto: $tel \r\n\r\n".htmlspecialchars(trim($_POST['mensaje']));
+        $mensaje = "<strong>Datos de contacto:</strong> <br/><strong>Nombre:</strong> $nombre $apellido <br/><strong>Email:</strong> $email <br/><strong>Teléfono o Celular:</strong> $tel <br/>".htmlspecialchars(trim($_POST['mensaje']));
 
         $headers  = 'MIME-Version: 1.0' . "\r\n"
         .'Content-type: text/html; charset=utf-8' . "\r\n"
