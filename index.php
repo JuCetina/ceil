@@ -1,3 +1,10 @@
+<?php 
+
+    require_once 'includes/conexion.php';
+    require_once 'includes/helpers.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -123,36 +130,43 @@
             </div>
             <div class="row">
                 <div class="col col-md-10 col-lg-8 offset-md-1 offset-lg-2 pt-2">
-                    <form action="#" method="POST">
-                        
-                        <div class="form-row">
-                            <div class="form-group col-12 col-md-6">
-                                <input type="text" name="nombre" class="form-control" placeholder="Nombre" required pattern="[A-Za-z]+">
-                            </div>
-                            <div class="form-group col-12 col-md-6">
-                                <input type="text" name="apellido" class="form-control" placeholder="Apellido" required pattern="[A-Za-z]+">
-                            </div>
+
+                <form action="contacto.php" method="POST">
+                    <?php if(isset($_SESSION['contacto_exito'])): ?>
+                        <div class="p-3 mb-2 alert alert-success"><?=$_SESSION['contacto_exito']?></div>
+                    <?php elseif(isset($_SESSION['contacto_error'])): ?>
+                        <div class="p-3 mb-2 alert alert-error"><?=$_SESSION['contacto_error']?></div>
+                    <?php endif; ?>
+					<div class="form-row">
+						<div class="form-group col-12 col-md-6">
+							<input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+						</div>
+						<div class="form-group col-12 col-md-6">
+							<input type="text" name="apellido" class="form-control" placeholder="Apellido" required>
+						</div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-12 col-md-6">
+                            <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-12 col-md-6">
-                                <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
-                            </div>
-                            <div class="form-group col-12 col-md-6">
-                                <input type="number" name="tel" class="form-control" placeholder="Teléfono" required pattern="[0-9]+">
-                            </div>
+                        <div class="form-group col-12 col-md-6">
+                            <input type="number" name="tel" class="form-control" placeholder="Teléfono" required pattern="[0-9]+">
                         </div>
-						<div class="form-row">
-							<div class="form-group col">
-                                <textarea name="mensaje" class="form-control form-control-lg" placeholder="¿Sobre qué deseas hablarnos?" required></textarea>
-                                <small class="form-text text-muted">Todos los campos son obligatorios.</small>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col">
-                                <button type="submit" class="btn btn-success btn-block">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
+                    </div>
+					<div class="form-row">
+						<div class="form-group col">
+                            <textarea name="mensaje" class="form-control form-control-lg" placeholder="¿Sobre qué deseas hablarnos?" required></textarea>
+                            <small class="form-text text-muted">Todos los campos son obligatorios.</small>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="col">
+							<button type="submit" class="btn btn-success btn-block">Enviar</button>
+						</div>
+					</div>
+                </form>
+                <?php borrarAlertas(); ?>
+                    
                 </div>
             </div>
         </div>
@@ -169,12 +183,12 @@
                     <img src="img/logo.png" alt="Logo del Centro Educativo Integral Latinoamericano">
                 </div>
                 <div class="col-12 col-md text-md-right">
-                    <div class="icons">
+                    <div class="icons__container">
                         <a href="https://www.facebook.com/ceilcentroeducativo" target="_blank">
-                            <i class="icon-facebook2"></i>
+                            <div class="icon__fb"></div>
                         </a>
                         <a href="https://www.instagram.com/ceilcentroeducativo/" target="_blank">
-                            <i class="icon-instagram"></i>
+                            <div class="icon__instagram"></div>
                         </a>
                     </div>
                     <p class="mb-1">3057045642 - 3057242954</p>
@@ -211,6 +225,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
 </body>
 </html>
