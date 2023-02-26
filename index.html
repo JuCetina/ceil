@@ -131,12 +131,8 @@
             <div class="row">
                 <div class="col col-md-10 col-lg-8 offset-md-1 offset-lg-2 pt-2">
 
-                <form action="contacto.php" method="POST">
-                    <?php if(isset($_SESSION['contacto_exito'])): ?>
-                        <div class="p-3 mb-2 alert alert-success"><?=$_SESSION['contacto_exito']?></div>
-                    <?php elseif(isset($_SESSION['contacto_error'])): ?>
-                        <div class="p-3 mb-2 alert alert-error"><?=$_SESSION['contacto_error']?></div>
-                    <?php endif; ?>
+                <form action="#" method="POST">
+                    
 					<div class="form-row">
 						<div class="form-group col-12 col-md-6">
 							<input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
@@ -212,7 +208,7 @@
              
 			 <div class="modal-body">
                 <div class="alert alert-warning" role="alert">
-                    <a href="descarga.php" class="alert-link">Descarga el archivo aquí</a>, imprímelo, diligéncialo y envíalo escaneado al correo electrónico matriculas@ceil.edu.co
+                    <a href="#" class="alert-link">Descarga el archivo aquí</a>, imprímelo, diligéncialo y envíalo escaneado al correo electrónico matriculas@ceil.edu.co
                 </div>
 			 </div>
 			 <div class="modal-footer">
